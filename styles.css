@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/BgCars.JPG");
+  background-repeat: no-repeat;
+  background-size: 100% 630px;
+  background-color: #6b6969;
+  margin: 0;
+}
+
+.header a {
+  color: darkred;
+  text-decoration: none;
+  -webkit-transition: 0.9s;
+  -o-transition: 0.9s;
+  transition: 0.9s;
+}
+
+.header a:hover {
+  color: royalblue;
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 5px;
+  width: 100%;
+  z-index: 1001;
+  font-size: 19px;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.carlogo img {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px 50px;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: darkred;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px;
+  text-align: center;
+  text-border: 1px solid royalblue;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  -webkit-transition: 0.9s;
+  -o-transition: 0.9s;
+  transition: 0.9s;
+  color: royalblue;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 2px solid royalblue;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  position: absolute;
+  min-width: 160px;
+}
+
+.dropdown-content a {
+  color: darkred;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 12px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: hidden;
+  -webkit-transition: 0.9s;
+  -o-transition: 0.9s;
+  transition: 0.9s;
+  color: royalblue;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 12px;
+  display: block;
+}
+
+.dropdown-content img {
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+  margin-right: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  -webkit-transition: 0.9s;
+  -o-transition: 0.9s;
+  transition: 0.9s;
+  color: royalblue;
+  font-size: 15px;
+  font-weight: 700;
+  display: block;
+}
+
+.search a {
+  color: darkred;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.overlay a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: darkred;
+  display: block;
+  -webkit-transition: 0.9s;
+  -o-transition: 0.9s;
+  transition: 0.9s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  background-color: transparent;
+  color: royalblue;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+  display: block;
+  -webkit-transition: 0.9s;
+  -o-transition: 0.9s;
+  transition: 0.9s;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  padding: 25px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    overflow-y: auto;
+  }
+
+  .overlay .closebtn a:hover,
+  .overlay a:focus {
+    padding: 25px;
+    font-size: 30px;
+    font-weight: 700;
+    top: 10px;
+    right: 5px;
+  }
+}
+
+.overlay .media img {
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.media li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.media p {
+  color: royalblue;
+  text-align: center;
+  padding: 2px;
+  font-size: 10px;
+}
+
+.media img {
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.menu {
+  float: right;
+  margin-top: 14px;
+  margin-right: 9px;
+  text-align: center;
+}
+
+.title h1 {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 25%;
+}
+
+.title p {
+  color: royalblue;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 20px;
+  padding-bottom: 450px;
+}
+
+.footer {
+  margin-top: 10%;
+  padding-bottom: 10%;
+  background-color: rgb(0, 0, 0);
+}
+
+.footer p {
+  color: royalblue;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer a {
+  font-size: 20px;
+  color: darkred;
+  padding: 15px;
+}
+
+.footer a:hover {
+  color: royalblue;
+  -webkit-transition: 0.9s;
+  -o-transition: 0.9s;
+  transition: 0.9s;
+}
